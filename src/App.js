@@ -1,15 +1,16 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import ChatFeature from './features/Chat';
 
 function App() {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>Thành Song</p>
-            </header>
-        </div>
-    );
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<ChatFeature />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
